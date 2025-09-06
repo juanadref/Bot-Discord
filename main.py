@@ -4,7 +4,7 @@ from discord.ext import commands
 import os
 from datetime import datetime
 
-TOKEN = os.environ['TOKEN']
+TOKEN = os.getenv("DISCORD_TOKEN")
 
 intents = discord.Intents.all()
 bot = commands.Bot(command_prefix=".", intents=intents)
